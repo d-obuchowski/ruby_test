@@ -28,7 +28,8 @@ class GeolocationCreationForm
   def address_is_valid
     return if errors.key?("address")
 
-    errors.add("address", "is invalid") if ip_address.blank?
+    msg = "is invalid. Please insert value: e.g https://www.google.com or 216.58.215.100"
+    errors.add("address", msg) if ip_address.blank?
   end
 
   def ip_address_is_unique
