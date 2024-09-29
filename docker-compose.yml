@@ -1,0 +1,29 @@
+version: '3.8'
+
+services:
+  # Service for the Ruby on Rails web application
+  web:
+    build: .  # Build the service's image from the current directory
+    command: bundle exec rails s -p 3000 -b '0.0.0.0'  # Command to start the Rails server
+    ports:
+      - "3000:3000"  # Expose ports for accessing the application
+    volumes:
+      - .:/app  # Mount the current directory inside the container
+    depends_on:
+      - db  # Specify dependency on the database service
+    env_file:
+      - ".env"
+
+  # Service for the PostgreSQL database
+  db:
+    image: postgres:13  # Use the official PostgreSQL version 13 image
+    ports:
+      - "5432:5432"  # Expose port for accessing the database
+    volumes:
+      - postgres_data:/var/lib/postgresql/data  # Create a volume for storing database data
+    env_file:
+      - ".env"
+
+# Define a volume for storing PostgreSQL data
+volumes:
+  postgres_data:

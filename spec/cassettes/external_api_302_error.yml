@@ -1,0 +1,34 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api.ipstack.com/?access_key=35739f5bf46847d4baa540185c9c8b52
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v2.12.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 302
+      message: Moved Temporarily
+    headers:
+      Date:
+      - Sat, 28 Sep 2024 13:04:46 GMT
+      Content-Type:
+      - text/html
+      Content-Length:
+      - '138'
+      Location:
+      - https://apilayer.com?access_key=35739f5bf46847d4baa540185c9c8b52
+    body:
+      encoding: UTF-8
+      string: "<html>\r\n<head><title>302 Found</title></head>\r\n<body>\r\n<center><h1>302
+        Found</h1></center>\r\n<hr><center>nginx</center>\r\n</body>\r\n</html>\r\n"
+  recorded_at: Sat, 28 Sep 2024 13:04:46 GMT
+recorded_with: VCR 6.3.1

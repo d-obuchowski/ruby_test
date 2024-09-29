@@ -1,0 +1,47 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api.ipstack.com/asdadas/asdas/?access_key=35739f5bf46847d4baa540185c9c8b52
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v2.12.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json
+      Transfer-Encoding:
+      - chunked
+      Date:
+      - Sat, 28 Sep 2024 12:53:17 GMT
+      X-Apilayer-Transaction-Id:
+      - 97de43ac-2df4-4d17-ac02-b6e309120d12
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Allow-Methods:
+      - GET, POST, HEAD, OPTIONS
+      Access-Control-Allow-Headers:
+      - "*"
+      X-Quota-Limit:
+      - '100'
+      X-Quota-Remaining:
+      - '20'
+      X-Increment-Usage:
+      - '1'
+      X-Request-Time:
+      - '0.024'
+    body:
+      encoding: UTF-8
+      string: '{"detail":"Not Found"}'
+  recorded_at: Sat, 28 Sep 2024 12:53:17 GMT
+recorded_with: VCR 6.3.1

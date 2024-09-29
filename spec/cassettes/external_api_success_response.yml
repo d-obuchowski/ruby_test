@@ -1,0 +1,55 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api.ipstack.com/77.46.83.45?access_key=35739f5bf46847d4baa540185c9c8b52
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v2.12.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json
+      Transfer-Encoding:
+      - chunked
+      Date:
+      - Sat, 28 Sep 2024 12:06:21 GMT
+      X-Apilayer-Transaction-Id:
+      - ed63d2f8-f1fd-4e7f-bc8f-05425446c845
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Allow-Methods:
+      - GET, POST, HEAD, OPTIONS
+      Access-Control-Allow-Headers:
+      - "*"
+      X-Quota-Limit:
+      - '100'
+      X-Quota-Remaining:
+      - '21'
+      X-Increment-Usage:
+      - '1'
+      X-Request-Time:
+      - '0.032'
+    body:
+      encoding: UTF-8
+      string: '{"ip": "77.46.83.45", "type": "ipv4", "continent_code": "EU", "continent_name":
+        "Europe", "country_code": "PL", "country_name": "Poland", "region_code": "PD",
+        "region_name": "Podlasie", "city": "Bia\u0142ystok", "zip": "15-668", "latitude":
+        53.127479553222656, "longitude": 23.10713005065918, "msa": null, "dma": null,
+        "radius": "4.24448", "ip_routing_type": "fixed", "connection_type": "tx",
+        "location": {"geoname_id": 776069, "capital": "Warsaw", "languages": [{"code":
+        "pl", "name": "Polish", "native": "Polski"}], "country_flag": "https://assets.ipstack.com/flags/pl.svg",
+        "country_flag_emoji": "\ud83c\uddf5\ud83c\uddf1", "country_flag_emoji_unicode":
+        "U+1F1F5 U+1F1F1", "calling_code": "48", "is_eu": true}}'
+  recorded_at: Sat, 28 Sep 2024 12:06:21 GMT
+recorded_with: VCR 6.3.1
