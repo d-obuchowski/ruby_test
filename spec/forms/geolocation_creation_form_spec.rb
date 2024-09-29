@@ -78,16 +78,31 @@ describe GeolocationCreationForm do
       end
 
       context 'when address is invalid' do
-        let(:address) { '2jf8923hfh bc82fb8fghf892yur07y' }
         let(:ip_address) { nil }
         let(:expected_message) { "is invalid. Please insert value: e.g https://www.google.com or 216.58.215.100" }
 
-        it 'returns proper validation error' do
-          subject
+        context 'when address contains numbers, letters and spaces' do
+          let(:address) { '2jf8923hfh bc82fb8fghf892yur07y' }
 
-          expect(described_object.valid?).to eq(false)
-          expect(described_object.errors.size).to eq 1
-          expect(described_object.errors['address']).to eq [ expected_message ]
+          it 'returns proper validation error' do
+            subject
+
+            expect(described_object.valid?).to eq(false)
+            expect(described_object.errors.size).to eq 1
+            expect(described_object.errors['address']).to eq [ expected_message ]
+          end
+        end
+
+        context 'when address contains only numbers' do
+          let(:address) { '333333' }
+
+          it 'returns proper validation error' do
+            subject
+
+            expect(described_object.valid?).to eq(false)
+            expect(described_object.errors.size).to eq 1
+            expect(described_object.errors['address']).to eq [ expected_message ]
+          end
         end
       end
 

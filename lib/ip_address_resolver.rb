@@ -5,7 +5,7 @@ class IpAddressResolver
 
       uri = URI.parse(address)
       IPSocket.getaddress(uri.host)
-    rescue URI::InvalidURIError
+    rescue *[ URI::InvalidURIError, Socket::ResolutionError ]
       nil
     end
   end
